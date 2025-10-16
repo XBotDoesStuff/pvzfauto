@@ -8,7 +8,7 @@ exit_key = 'p'
 
 def locate_needy_plants(image):
     try:
-        locations = list(pyautogui.locateAllOnScreen(image, confidence=0.90))
+        locations = list(pyautogui.locateAllOnScreen(image, confidence=0.90, grayscale=True))
         if locations:
             return locations
     except:
